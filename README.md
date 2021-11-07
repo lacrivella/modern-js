@@ -77,4 +77,13 @@ console.log(cars[key]);
 // california
 
 #### Copying and Comparing Objects
+We can copy objects by having a variable reference another (see script.js for examples). This will store the 'copy' as a reference to the original object. If we **modify one object, the reference object will also be modified and vice versa**. 
+Comparison between the same objects (ie, objects that reference on another) will return truthy.
+
+HOWEVER! The same is NOT true when we look at two sperate objects that may hold the same properties. Though these objects may both be empty, or hold the same property values (ie, color: 'red'), these are technically two completely different objects in your code. Therefore, when we compare them they will always return falsy. 
+
+Only a comparison between the same object returns true.
+
+A quick way of making a clone of an Object in JavaScript is to use *Object.assign()*. *Object.assign* takes a target object as the first argument, and a source as the second one. However, unlike using a variable to make an object reference another, updating a property on the original object will not modify the clone and vice versa.
+
 

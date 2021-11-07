@@ -67,3 +67,57 @@ console.log(cars['key']);
 // undefined
 console.log(cars[key]);
 // california
+
+// copying an Object
+let car = {
+  color: 'red'
+}
+let secondCar = car;
+
+car.wheels = 4
+console.log(car);
+// {color: 'red', wheels: 4}
+console.log(secondCar);
+// {color: 'red', wheels: 4}
+
+// Objects that reference one another return truthy!
+let car = {
+  color: 'red'
+}
+let secondCar = car;
+
+car.wheels = 4
+console.log(car == secondCar);
+// true
+console.log(car === secondCar);
+// true
+
+// the same isn't true for empty objects/objects that hold the same value but are two independent objects
+const emptyObj1 = {};
+const emptyObj2 = {};
+
+console.log(emptyObj1 == emptyObj2);
+// false
+console.log(emptyObj1 === emptyObj2);
+// false
+
+const obj1 = {a: 1};
+const obj2 = {a: 1};
+
+console.log(obj1 == obj2);
+// false
+console.log(obj1 === obj2);
+// false
+
+
+// Using Object.assign() to copy
+const car = {
+  color:'red'
+}
+
+const secondCar = Object.assign({}, car)
+car.wheels = 4;
+console.log(car);
+// {color: 'red', wheels: 4}
+console.log(secondCar);
+// {color: 'red'}

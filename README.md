@@ -38,21 +38,21 @@ primitive data that does not have a method and is not an object
 - **boolean**: used to represent a value that is either true or false (let ownsADog = false;)
 - **null**: represents *absence* of value
 - **undefined**: represents an *undefined* value. 
-More information on the difference between null vs, undefined can be found [here](https://flexiple.com/undefined-vs-null-javascript/).
+ - More information on the difference between null vs, undefined can be found [here](https://flexiple.com/undefined-vs-null-javascript/).
 - **symbol**: new as of ES6, represents a value that is unique and immutable.
 
 ### Object Type
 While the previous 6 primitives can hold only a single value, whether it’s a null value, true, false, etc., objects are used to store the collection of properties. These properties have a key/value pair.
 
 example:
-const LA = {
-  name: "Leigh-Ann",
-  age: 33,
-  ownsADog: false,
-  telephone: function() {
-    console.log('ring ring ring')
-  }
-};
+  const LA = {
+    name: "Leigh-Ann",
+    age: 33,
+    ownsADog: false,
+    telephone: function() {
+      console.log('ring ring ring')
+    }
+  };
 
 Two ways to create an empty object, either by declaring it with the method *new Objet()* (const car = new Object();) or using an *object literal* (cont car = {};)
 
@@ -61,11 +61,11 @@ You can use *dot notation* to add/update properties in your object. However, you
 Another use for the bracket notation is to use it to access properties of an object by its key. Be careful, no strings are around key, as it’s a **variable name and not a string**.
 
 example:
-const cars = {
-  ferrari: "california",
-  porsche: "911",
-  bugatti: "veyron",
-}
+  const cars = {
+    ferrari: "california",
+    porsche: "911",
+    bugatti: "veyron",
+  }
 
 // user input
 const key = "ferrari"
@@ -76,4 +76,5 @@ console.log(cars['key']);
 console.log(cars[key]);
 // california
 
-#### Copying and COmparing Objects
+#### Copying and Comparing Objects
+

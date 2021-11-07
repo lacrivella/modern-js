@@ -96,3 +96,33 @@ We access values of an array via their index. **Remember that arrays start at po
 #### typeof
 Using the typeof() will let us see what kind of data type our variable may be. JavaScript has some weird things to it that you just gotta roll with. For example, looking at the typeof(null) will return an object. Why? It's a bug, but like all of code, a bug that is now a feature. ¯\_(ツ)_/¯
 
+## FUNCTIONS
+*What is Scope?*
+The scope of a variable controls where that variable can be accessed from. We can have a *global scope*, meaning that the variable can be accessed from anywhere in our code or we can have a *block scope*, meaning that the variable can be accessed only from inside of the block where it has been declared.
+
+Functions pass values through a parameter, while the function's statement is what is written within curly brackets {}. See functions.js for example.
+
+A very important thing to remember is that **primitives** are passed to a function by value, meaning that the **changes done to those values are not reflected globally**. On the other hand, if the value is **not a primitive**, such as an Object or an Array, it is then passed by reference, meaning that **any modification done to it will be reflected in the original Object**.
+
+Variable declared with the keywords *let* or *const* are bound to the block scope where they have been declared.
+
+### this
+see example in functions.js as a reference (ln 83-88).
+We called this function in the global context, therefore the value of **this** referred to the **Window Object**.
+
+We can avoid accidentally referring to the Window Object by turning on *strict mode*.
+You can do that by writing 'use strict'; at the beginning of your JavaScript file.
+
+By doing so you will enable a stricter set of rules for JavaScript, among which there’s one that sets the value of the Global Object to undefined instead of to the Window Object. This causes our this keyword to also become undefined.
+
+If we want to manually set the value of this to something we can use *.bind()*
+see example in functions.js ln 90-104 as an example of how binding can be used.
+
+There are two other methods we can use to set the value of the **this** keyword: *.call()* and *.apply()*.
+
+They are both similar in that both methods call a function with a given **this** value. The arguments they accept are a bit different:
+- *.call()* accepts a list of arguments 
+- *.apply()* accepts a single array of arguments
+
+The major difference between the two comes into play when we are writing a function that does not need to know, or doesn’t know the number of arguments required. In that case, since .call() requires us to pass the arguments individually, it becomes problematic to do. The solution is to use .apply(), because we can just pass the array and it will get unpacked inside of the function, no matter how many arguments it contains.
+

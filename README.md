@@ -86,4 +86,13 @@ Only a comparison between the same object returns true.
 
 A quick way of making a clone of an Object in JavaScript is to use *Object.assign()*. *Object.assign* takes a target object as the first argument, and a source as the second one. However, unlike using a variable to make an object reference another, updating a property on the original object will not modify the clone and vice versa.
 
+#### Arrays
+Objects store data in a key value pair. We can use array methods to manipulate an objects data. Array is an Object that stores values in order. Arrays are not a type, their type is object.
+
+const fruitBasket = ['apple','banana','orange'];
+
+We access values of an array via their index. **Remember that arrays start at position 0**. (i.e. fruitBasket[1] will return 'banana').
+
+#### typeof
+Using the typeof() will let us see what kind of data type our variable may be. JavaScript has some weird things to it that you just gotta roll with. For example, looking at the typeof(null) will return an object. Why? It's a bug, but like all of code, a bug that is now a feature. ¯\_(ツ)_/¯
 

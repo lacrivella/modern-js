@@ -16,3 +16,9 @@ All three are subjected to **hoisting**, aka they're processed before any code i
 
 
 
+## ARROW FUNCTIONS
+ Arrow functions are anonymous. If we want to have a name to reference them we can bind them to a variable (ie, const greeting = name => console.log(`hello ${name}`);)
+
+ When you use an arrow function, the **this** keyword is inherited from the parent scope.
+
+ The **arguments object** is an array-like object that we can access from inside functions and contains the values of the arguments passed to that function.

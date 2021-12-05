@@ -34,3 +34,18 @@ With **deconstructing** you can pass arguments to your defined parameters (ie co
 
 By writing = {} we default our argument to an Object and no matter what argument we pass in the function, it will be an Object. If you don't write it as an object, it will through this console message *cannot destructure property `total` of 'undefined' or 'null'.*
 
+## INTERPOLATING STRINGS
+In ES6, we can use backticks to make our lives easier. We also need to wrap our variable names in ${}
+
+## EXPRESSION INTERPOLATIONS
+Same as strings. Instead of single quotes we now use back ticks and include our variable expression in ${}
+
+## TERNARY OPERATORS
+condition ? exprIfTrue : exprIfFalse
+
+? : looks for true statements and takes the first value, otherwise take second value.
+for example: const hasDog = false; hasDog ? "true" : "adopt don't shop";
+Is hasDog true? No. So our statement will return "adopt don't shop".
+
+More information on ternaries can be found here: [Ternary Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+

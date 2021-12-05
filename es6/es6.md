@@ -65,4 +65,9 @@ When destructuring arrays, we use [] and not {}.
 
 The ... is the syntax for the rest operator.
 
+## FOR OF LOOP
+Objects are **non iterable**, so how do we iterate over them? We have to first grab all the values of the object using something like Object.keys() or the new ES6 function:Object.entries()
 
+The for in loop is a bit different because it will iterate over all the enumerable properties of an object in no particular order.
+
+for in will return a list of keys whereas the for of will return a list of values of the numeric properties of the object being iterated.

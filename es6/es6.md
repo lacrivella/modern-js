@@ -58,3 +58,11 @@ includes() also truthy/falsey also case sensitive. no need for index parameter.
 
 repeat() will take an argument that specifies the number of times it needs to repeat the string.
 
+## DESTRUCTURING
+The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
+
+When destructuring arrays, we use [] and not {}.
+
+The ... is the syntax for the rest operator.
+
+

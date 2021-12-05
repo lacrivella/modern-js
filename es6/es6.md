@@ -49,3 +49,12 @@ Is hasDog true? No. So our statement will return "adopt don't shop".
 
 More information on ternaries can be found here: [Ternary Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
+## String methods
+Just for the [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#) to find out more. There's a bunch. ES6 added four new string methods.
+
+startsWith() is case sensitive and will retunr true or false. you can aslo add a second parameter to start on a certain index in a string. endWith() is similar but will check to see if the string ends with whatever arguments, not starts.
+
+includes() also truthy/falsey also case sensitive. no need for index parameter.
+
+repeat() will take an argument that specifies the number of times it needs to repeat the string.
+

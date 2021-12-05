@@ -22,3 +22,15 @@ All three are subjected to **hoisting**, aka they're processed before any code i
  When you use an arrow function, the **this** keyword is inherited from the parent scope.
 
  The **arguments object** is an array-like object that we can access from inside functions and contains the values of the arguments passed to that function.
+
+ ## DEAULT FUNCTION ARGUMENTS
+ You can defined values in your parameters within your method (ie function calculatePrice(total, tax = 0.1, tip = 0.05){
+  console.log(total + (total * tax) + (total * tip));
+})
+
+You can then pass undefined as one of the arguments, and it will take the defined parameter value (calculatePrice(100, undefined, 0.15))
+
+With **deconstructing** you can pass arguments to your defined parameters (ie const bill = calculatePrice({ tip: 0.15, total:150 })) This will make the arguments of our function an object. Don't have to worry about the order of our arguments because they are now key/value pairs.
+
+By writing = {} we default our argument to an Object and no matter what argument we pass in the function, it will be an Object. If you don't write it as an object, it will through this console message *cannot destructure property `total` of 'undefined' or 'null'.*
+
